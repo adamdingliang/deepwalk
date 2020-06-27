@@ -49,8 +49,9 @@ class Graph(defaultdict):
   def make_undirected(self):
   
     t0 = time()
+    print(self.keys())
 
-    for v in self.keys():
+    for v in list(self.keys()):
       for other in self[v]:
         if v != other:
           self[other].append(v)
